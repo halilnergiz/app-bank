@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/accounts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&family=Roboto+Mono:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+    <title>App Bank</title>
+</head>
+
+<body>
+
+
+    <input type="checkbox" id="check">
+
+    <div id="sidebar-button">
+        <label for="check"> <i class="fas fa-bars" id="sidebar-btn"></i> </label>
+    </div>
+
+    <div id="times-button">
+        <label for="check"> <i class="fas fa-times" id="sidebar-btn-times"></i> </label>
+    </div>
+
+    <div id="sidebar-options">
+        <img src="../assets/logo.jpg" id="logo">
+        <ul class="sidebar-menu">
+
+            <li class="menu-item">
+
+                <a href="#" id="option-one"> Currency </a>
+
+                <ul class="sub-categories-doviz">
+                    <li> <a href="#">Currency <br> Accounts</a> </li>
+                    <li id="live-currency"> <a href="#">Live <br> Currency</a> </li>
+                </ul>
+
+            </li>
+
+            <li class="menu-item-2">
+
+                <a href="#" id="option-two">Account Activities </a>
+
+                <ul class="sub-categories-hareketler">
+                    <li> <a href="#">Income</a></li>
+                    <li> <a href="#">Expense</a></li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div id="user">
+        <div id="container">
+
+            <h2 id="welcome"> </h2>
+            <div id="Account-Cards">
+
+                <div id="Account">
+
+                    <h1 class="account-title"> <i class="fas fa-user-circle"></i> MY ACCOUNTS</h1>
+                    <div class="Account-Information">
+                        <span>IBAN:</span> <span id="iban"> </span><br><br>
+                        <span>Balance:</span> <span id="balance"> </span>
+                    </div>
+
+                    <div id="transitionAccount">
+
+                        <i class="fas fa-chevron-left" id="left"></i>
+                        <button id="transfer-btn">Money Transfer</button>
+
+                        <div id="Transfer">
+                            <div class="bg"> </div>
+
+                            <div id="money-transfer">
+                                <a class="popup-close">&times;</a>
+
+                                <h1> <i class="fas fa-exchange-alt"></i> MONEY TRANSFER</h1>
+
+                                <form>
+                                    <label for="enter-iban" class="enter">IBAN&nbsp; </label>
+                                    <input type="text" id="enter-iban" autocomplete="off">
+                                    <br><br>
+
+                                    <label for="enter-amount" class="enter">Amount&nbsp; </label>
+                                    <input type="text" maxlength="10" id="enter-amount" autocomplete="off">
+                                    <br><br>
+
+                                    <input type="submit" id="sendMoney" value="Send">
+                                </form>
+
+                            </div>
+                        </div>
+
+
+                        <i class="fas fa-chevron-right" id="right"></i>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div id="Account-Activities">
+
+                <div class="activities">
+                    <h1 id="activities-title"><i class="fas fa-history"></i> ACCOUNT ACTIVITIES</h1>
+
+                    <div class="activity-card">
+                        <span class="amount">Amount</span> - <span class="date">Date</span> - <span>Transaction</span>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <script type="module" src="../../dist/user.bundle.js"></script>
+    <script type="module" src="../../dist/popup.bundle.js"></script>
+</body>
+
+</html>

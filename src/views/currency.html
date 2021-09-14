@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../assets/currency.css">
+
+    <title>Currency</title>
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+
+    <div id="sidebar-button">
+        <label for="check"> <i class="fas fa-bars" id="sidebar-btn"></i> </label>
+    </div>
+
+    <div id="times-button">
+        <label for="check"> <i class="fas fa-times" id="sidebar-btn-times"></i> </label>
+    </div>
+
+    <div id="sidebar-options">
+        <img src="../assets/logo.jpg" id="logo">
+        <ul class="sidebar-menu">
+
+            <li class="menu-item">
+
+                <a href="#" id="option-one"> Currency </a>
+
+                <ul class="sub-categories-doviz">
+                    <li> <a href="#">Currency <br> Accounts</a> </li>
+                    <li> <a href="#">Live <br> Currency</a> </li>
+                </ul>
+
+            </li>
+
+            <li class="menu-item-2">
+
+                <a href="#" id="option-two">Account Activities </a>
+
+                <ul class="sub-categories-hareketler">
+                    <li> <a href="#">Income</a></li>
+                    <li> <a href="#">Expense</a></li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+
+    <div id="updateTime">
+       <span class="date"></span>
+    </div>
+
+    <div id="content">
+        <div id="header">
+            <div id="dolarContent">
+                <div class="dolar">$</div>
+                <span class="dolar" id="dolarPurchase">Buying:</span> <br>
+                <span class="dolar" id="dolarSale">Sales:</span>
+            </div>
+            <div id="euroContent">
+                <div class="euro">&euro;</div>
+                <span class="euro" id="euroPurchase">Buying:</span> <br>
+                <span class="euro" id="euroSale">Sales:</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="../events/axios.js"></script> -->
+    <script src="../../dist/currency.bundle.js"></script>
+
+</body>
+
+</html>

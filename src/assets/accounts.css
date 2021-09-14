@@ -1,0 +1,406 @@
+html {
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    margin-left: 2.5rem;
+}
+
+#head {
+    border-bottom: solid 1px black;
+}
+
+#Account-Cards {
+    display: flex;
+    justify-content: center;
+}
+
+#Account {
+    font-size: 1.3rem;
+    margin-top: 2%;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    box-shadow: gray 5px 5px 10px 5px;
+    padding: 5rem;
+    width: 30rem;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+#Account h1 {
+    border-bottom: black solid 2px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.Account-Information {
+    position: relative;
+    left: 11rem;
+}
+
+#welcome {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: #0575a5;
+    border-radius: 1rem;
+    cursor: default;
+    user-select: none;
+    font-family: 'Noto Serif', serif;
+}
+
+#logo {
+    height: 50px;
+    width: 90px;
+    position: relative;
+    left: 80px;
+    top: 80px;
+    box-sizing: border-box;
+}
+
+.account-title {
+    text-align: center;
+    position: relative;
+    bottom: 2rem;
+    user-select: none;
+}
+
+#transitionAccount {
+    width: 15rem;
+    position: relative;
+    top: 2rem;
+    left: 8rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: all;
+}
+
+#left, #right {
+    user-select: none;
+    bottom: -20px;
+    position: relative;
+}
+
+#left:hover, #right:hover {
+    transition: all .2s;
+    color: rgb(3, 155, 3);
+    /* font-size: 1.4rem; */
+}
+
+#Account:hover {
+    box-shadow: rgb(97, 95, 119) 5px 5px;
+    transition: .5s;
+}
+
+/* MONEY TRANSFER */
+
+#Transfer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    bottom: 1rem;
+    width: 40rem;
+    height: 20rem;
+    padding: 30px;
+    border-radius: 10px;
+    transform: translate(-34%, 14%);
+    z-index: 100;
+    visibility: hidden;
+    cursor: default;
+    user-select: none;
+    background-color: transparent;
+}
+
+#Transfer h1 {
+    border-bottom: 1px solid black;
+    opacity: .8;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+}
+
+#sendMoney {
+    position: relative;
+    width: 10rem;
+    height: 2rem;
+    top: 1rem;
+    left: 5rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#sendMoney:hover {
+    background-color: rgb(34, 148, 34);
+    color: white;
+}
+
+
+#transfer-btn {
+    color: white;
+    border: none;
+    background-color: rgb(66, 66, 66);
+    font-size: 16px;
+    height: 2.5rem;
+    width: 10rem;
+    position: relative;
+    bottom: -10px;
+    left: 3px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 1rem;
+    transition: .2s
+}
+
+#transfer-btn:hover {
+    letter-spacing: .1rem;
+    font-weight: 500;
+}
+
+#enter-iban{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    background: transparent;
+}
+#enter-amount{
+    border-bottom: 2px solid black;
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+    background: transparent;
+}
+.enter{
+    position: relative;
+    top: 6px;
+}
+/* #enter-iban:focus{
+    outline: none;
+} */
+/* POP-UP TRANSFER */
+
+.popup-close {
+    position: absolute;
+    right: 2rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+#Transfer.open {
+    visibility: visible;
+    z-index: 10;
+    background-image: url('bg1.jpg');
+    background-position: right 140px top -50px;
+    padding: 80px;
+    top: -420px;
+}
+
+
+
+/* ACTIVITIES SECTION */
+
+#Account-Activities {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+#activities-title {
+    border-bottom: 1px solid black;
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+}
+
+/* SIDEBAR PROCESS */
+
+#sidebar-button {
+    position: absolute;
+    margin-top: .1rem;
+    margin-left: .2rem;
+    transition: .5s;
+}
+
+#sidebar-btn {
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~#user {
+    margin-left: 8rem;
+}
+
+#times-button {
+    position: absolute;
+    margin-top: .1rem;
+    margin-left: .2rem;
+    transition: .5s;
+    display: none;
+}
+
+#sidebar-btn-times {
+    cursor: pointer;
+}
+
+#check:checked~#times-button {
+    display: block;
+}
+
+#check:checked~#sidebar-button {
+    display: none;
+}
+
+#user {
+    transition: .5s;
+}
+
+/* SIDEBAR MENU */
+
+#logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    top: -4rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.sidebar-menu>li {
+    padding: 10px;
+    margin-bottom: 2rem;
+}
+
+.sub-categories-doviz>li, .sub-categories-hareketler>li {
+    padding: .5rem;
+    margin-bottom: .8rem;
+}
+
+#sidebar-options {
+    position: absolute;
+    top: 9rem;
+    /* width: 15rem; */
+    display: inline-block;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#sidebar-options ul li {
+    list-style: none;
+}
+
+#sidebar-options ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* SUB CATEGORİES */
+
+#sidebar-options {
+    font-size: 1.2rem;
+    transition: .5s;
+    margin-left: -13.5rem;
+}
+
+#check:checked~#sidebar-options {
+    /* display: block; */
+    margin-left: -3rem;
+}
+
+#option-one {
+    height: 1.5rem;
+    box-shadow: 5px 5px 5px;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: .5rem;
+}
+
+#option-two {
+    width: max-content;
+    box-shadow: 5px 5px 5px;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: .5rem;
+}
+
+.sub-categories-doviz {
+    width: 7rem;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    padding-top: .5rem;
+    transition: .25s;
+}
+
+.sub-categories-doviz li a {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item {
+    width: 3rem;
+    height: 1rem;
+}
+
+.menu-item:hover {
+    width: 4rem;
+    height: 10rem;
+}
+
+.menu-item:hover .sub-categories-doviz {
+    width: 8rem;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-item ul>li {
+    box-shadow: rgb(97, 95, 119) 5px 5px 5px;
+    opacity: .8;
+    position: relative;
+    left: -2.5rem;
+}
+
+.menu-item-2 ul>li {
+    box-shadow: rgb(97, 95, 119) 5px 5px 5px;
+    position: relative;
+    top: .8rem;
+    left: -2.5rem;
+    width: -1rem;
+}
+
+.sub-categories-hareketler {
+    height: 0;
+    width: 5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.menu-item-2:hover .sub-categories-hareketler {
+    height: auto;
+    width: 6rem;
+    visibility: visible;
+    opacity: .8;
+}
+
+.menu-item-2:hover {
+    width: 12rem;
+}
+
+.sub-categories-hareketler li a {
+    display: flex;
+    justify-content: center;
+}
